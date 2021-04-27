@@ -177,7 +177,7 @@
                 </p>
                 {% endif %}
 
-                <button class="btn btn-primary ml-auto" id="save-bio" onclick="mod_post('/mod/{{ b.base36id }}/settings/description', 'bio', 'save-bio');">Save</button>
+                <button class="btn btn-primary ml-auto" id="save-bio" onclick="mod_post('/mod/{{ b.base36id }}/settings/description', 'bio', 'save-bio');setTimeout(function(){var savebtn=document.getElementById('save-bio');savebtn.classList.remove('btn-success');savebtn.disabled=false;savebtn.textContent='Save'},2200);">Save</button>
 
               </div>
 
